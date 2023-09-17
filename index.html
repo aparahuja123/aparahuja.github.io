@@ -67,11 +67,13 @@
                             >
                                 <option selected>Select a Node by ID</option>
                                 
-                                    <option value="bar">bar</option>
+                                    <option value="display_withered">display_withered</option>
                                 
-                                    <option value="foo">foo</option>
+                                    <option value="display_good_2010">display_good_2010</option>
                                 
-                                    <option value="baz">baz</option>
+                                    <option value="display_good_2008_to_2010">display_good_2008_to_2010</option>
+                                
+                                    <option value="display_good_2005_to_2007">display_good_2005_to_2007</option>
                                 
                             </select>
                         </div>
@@ -125,8 +127,8 @@
                   
 
                   // parsing and collecting nodes and edges from the python
-                  nodes = new vis.DataSet([{"color": "#FFDEB4", "font": {"color": "black"}, "id": "bar", "label": "bar", "shape": "circle", "size": 40, "title": "bar"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "foo", "label": "foo", "shape": "circle", "size": 40, "title": "foo"}, {"color": "#FFDEB4", "font": {"color": "black"}, "id": "baz", "label": "baz", "shape": "circle", "size": 40, "title": "baz"}]);
-                  edges = new vis.DataSet([]);
+                  nodes = new vis.DataSet([{"color": "#A5D7E8", "font": {"color": "black"}, "id": "display_withered", "label": "display_withered", "shape": "circle", "size": 25, "title": "display_withered"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "display_good_2010", "label": "display_good_2010", "shape": "circle", "size": 25, "title": "display_good_2010"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "display_good_2008_to_2010", "label": "display_good_2008_to_2010", "shape": "circle", "size": 25, "title": "display_good_2008_to_2010\n"}, {"color": "#A5D7E8", "font": {"color": "black"}, "id": "display_good_2005_to_2007", "label": "display_good_2005_to_2007", "shape": "circle", "size": 25, "title": "display_good_2005_to_2007\n"}]);
+                  edges = new vis.DataSet([{"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "display_withered", "length": 1000, "to": "display_good_2010", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "display_good_2010", "length": 1000, "to": "display_good_2008_to_2010", "width": 3}, {"arrowStrikethrough": false, "arrows": "to", "color": "#FFDEB4", "from": "display_good_2008_to_2010", "length": 1000, "to": "display_good_2005_to_2007", "width": 3}]);
 
                   nodeColors = {};
                   allNodes = nodes.get({ returnType: "Object" });
