@@ -196,7 +196,7 @@ const animationTimeline = () => {
     .from(".hat", 0.5, {
       x: -100,
       y: 350,
-      rotation: -180,
+      rotation: 0,
       opacity: 0,
     })
     .staggerFrom(
@@ -206,7 +206,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: -50,
         // scale: 0.3,
-        rotation: 0,
+        rotation: 150,
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5),
       },
@@ -217,7 +217,7 @@ const animationTimeline = () => {
       0.7,
       {
         scale: 1.4,
-        rotationY: 0,
+        rotationY: 150,
       },
       {
         scale: 1,
