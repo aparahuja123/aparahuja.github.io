@@ -206,7 +206,7 @@ const animationTimeline = () => {
         opacity: 0,
         y: -50,
         // scale: 0.3,
-        rotation: 150,
+        rotation: 0,
         skewX: "30deg",
         ease: Elastic.easeOut.config(1, 0.5),
       },
@@ -217,7 +217,7 @@ const animationTimeline = () => {
       0.7,
       {
         scale: 1.4,
-        rotationY: 150,
+        rotationY: 0,
       },
       {
         scale: 1,
