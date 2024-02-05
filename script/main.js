@@ -6,11 +6,11 @@ const animationTimeline = () => {
 
   textBoxChars.innerHTML = `<span>${textBoxChars.innerHTML
     .split("")
-    .join("</span><span>")}</span>`;
+    .join("</span><span>")}</span`;
 
   hbd.innerHTML = `<span>${hbd.innerHTML
     .split("")
-    .join("</span><span>")}</span>`;
+    .join("</span><span>")}</span`;
 
   const ideaTextTrans = {
     opacity: 0,
@@ -196,7 +196,7 @@ const animationTimeline = () => {
     .from(".hat", 0.5, {
       x: -100,
       y: 350,
-      rotation: 0,
+      rotation: -180,
       opacity: 0,
     })
     .staggerFrom(
@@ -217,9 +217,11 @@ const animationTimeline = () => {
       0.7,
       {
         scale: 1.4,
+        rotationY: 150,
       },
       {
         scale: 1,
+        rotationY: 0,
         color: "#ff69b4",
         ease: Expo.easeOut,
       },
