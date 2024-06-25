@@ -39,6 +39,10 @@
             margin-top: 10px;
         }
         @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+                max-width: 90%;
+            }
             .timer {
                 font-size: 1.5rem;
             }
@@ -63,32 +67,16 @@
             opacity: 0.8;
             animation: rise 10s infinite ease-in;
         }
-        .bubble:nth-child(2) {
-            width: 80px;
-            height: 80px;
-            left: 20%;
-            animation-duration: 12s;
-        }
-        .bubble:nth-child(3) {
-            width: 60px;
-            height: 60px;
-            left: 50%;
-            animation-duration: 14s;
-        }
-        .bubble:nth-child(4) {
-            width: 100px;
-            height: 100px;
-            left: 80%;
-            animation-duration: 16s;
-        }
+        .bubble:nth-child(2) { width: 80px; height: 80px; left: 20%; animation-duration: 12s; }
+        .bubble:nth-child(3) { width: 60px; height: 60px; left: 50%; animation-duration: 14s; }
+        .bubble:nth-child(4) { width: 100px; height: 100px; left: 80%; animation-duration: 16s; }
+        .bubble:nth-child(5) { width: 50px; height: 50px; left: 10%; animation-duration: 13s; }
+        .bubble:nth-child(6) { width: 90px; height: 90px; left: 30%; animation-duration: 15s; }
+        .bubble:nth-child(7) { width: 70px; height: 70px; left: 60%; animation-duration: 11s; }
+        .bubble:nth-child(8) { width: 40px; height: 40px; left: 90%; animation-duration: 17s; }
         @keyframes rise {
-            0% {
-                transform: translateY(0);
-            }
-            100% {
-                transform: translateY(-120vh);
-                opacity: 0;
-            }
+            0% { transform: translateY(0); }
+            100% { transform: translateY(-120vh); opacity: 0; }
         }
     </style>
 </head>
@@ -97,15 +85,16 @@
         <div class="bubble"></div>
         <div class="bubble"></div>
         <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
+        <div class="bubble"></div>
     </div>
     <div class="container">
         <h1>Time Spent with Khushi</h1>
-        <div class="timer" id="timer">
-            Loading Love...
-        </div>
-        <div class="heartbeat">
-            In Heartbeats: <span id="heartbeatCount">Calculating...</span>
-        </div>
+        <div class="timer" id="timer">Loading Love...</div>
+        <div class="heartbeat">In Heartbeats: <span id="heartbeatCount">Calculating...</span></div>
     </div>
     <script src="script/main.js"></script>
 </body>
