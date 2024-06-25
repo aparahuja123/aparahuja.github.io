@@ -19,7 +19,13 @@ function updateTimer() {
     const totalHeartbeats = Math.floor(totalSeconds * averageHeartRate / 60);
 
     // Update the HTML content
-    document.getElementById('timer').innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    const timerElement = document.getElementById('timer');
+    const isMobile = window.innerWidth <= 600;
+    if (isMobile) {
+        timerElement.innerHTML = `${days} days ${hours} hours<br>${minutes} minutes ${seconds} seconds`;
+    } else {
+        timerElement.innerHTML = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
+    }
     document.getElementById('heartbeatCount').innerText = totalHeartbeats.toLocaleString();
 }
 

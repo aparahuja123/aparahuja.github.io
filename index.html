@@ -23,12 +23,19 @@
             padding: 30px;
             border-radius: 20px;
             box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            max-width: 90%;
+            max-width: 600px;
             margin: 10px;
             transition: transform 0.3s ease-in-out;
         }
         .container:hover {
             transform: translateY(-10px);
+        }
+        .header {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        .header .line-break {
+            display: none;
         }
         .timer {
             font-size: 2rem;
@@ -43,11 +50,20 @@
         @media (max-width: 600px) {
             .container {
                 padding: 20px;
-                max-width: 100%;
+                max-width: 90%;
                 margin: 5px;
+            }
+            .header {
+                font-size: 1.5rem;
+            }
+            .header .line-break {
+                display: block;
             }
             .timer {
                 font-size: 1.5rem;
+            }
+            .timer .line-break {
+                display: block;
             }
             .heartbeat {
                 font-size: 1rem;
@@ -95,9 +111,13 @@
         <div class="bubble"></div>
     </div>
     <div class="container">
-        <h1>Time Spent with Khushi</h1>
-        <div class="timer" id="timer">Loading Love...</div>
-        <div class="heartbeat">In Heartbeats: <span id="heartbeatCount">Calculating...</span></div>
+        <h1 class="header">Time Spent<span class="line-break"><br></span> with Khushi</h1>
+        <div class="timer" id="timer">
+            Loading Love...
+        </div>
+        <div class="heartbeat">
+            Total Heartbeats: <span id="heartbeatCount">Calculating...</span>
+        </div>
     </div>
     <script src="script/main.js"></script>
 </body>
