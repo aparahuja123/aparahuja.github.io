@@ -25,10 +25,27 @@
         }
         .timer {
             font-size: 2rem;
+            margin-top: 20px;
+        }
+        .heartbeat {
+            font-size: 1.2rem;
+            color: #888;
             margin-top: 10px;
+        }
+        .heart-icon {
+            font-size: 2rem;
+            color: #e74c3c;
+            margin-right: 5px;
+            vertical-align: middle;
         }
         @media (max-width: 600px) {
             .timer {
+                font-size: 1.5rem;
+            }
+            .heartbeat {
+                font-size: 1rem;
+            }
+            .heart-icon {
                 font-size: 1.5rem;
             }
         }
@@ -40,7 +57,9 @@
         <div class="timer" id="timer">
             Loading Love...
         </div>
-        <p>Total Heartbeats: <span id="heartbeatCount">Calculating...</span></p>
+        <div class="heartbeat">
+            <i class="heart-icon">&hearts;</i> Total Heartbeats: <span id="heartbeatCount">Calculating...</span>
+        </div>
     </div>
     <script src="script/main.js"></script>
 </body>

@@ -22,4 +22,8 @@ function updateTimer() {
     document.getElementById('heartbeatCount').innerText = totalHeartbeats.toLocaleString();
 }
 
+// Initial call to update the timer and heartbeat count
+updateTimer();
+
+// Set interval to update the timer and heartbeat count every second
 setInterval(updateTimer, 1000);
