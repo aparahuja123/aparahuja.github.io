@@ -9,14 +9,14 @@ function updateTimer() {
     const nowIST = new Date(now.getTime() + (5.5 * 60 * 60 * 1000));
 
     const diff = nowIST - startDateIST;
+    const totalSeconds = Math.floor(diff / 1000);
 
     const seconds = Math.floor((diff / 1000) % 60);
     const minutes = Math.floor((diff / 1000 / 60) % 60);
     const hours = Math.floor((diff / 1000 / 60 / 60) % 24);
     const days = Math.floor(diff / 1000 / 60 / 60 / 24);
 
-    const totalMinutes = days * 24 * 60 + hours * 60 + minutes;
-    const totalHeartbeats = totalMinutes * averageHeartRate;
+    const totalHeartbeats = Math.floor(totalSeconds * averageHeartRate / 60);
 
     document.getElementById('timer').innerText = `${days} days ${hours} hours ${minutes} minutes ${seconds} seconds`;
     document.getElementById('heartbeatCount').innerText = totalHeartbeats.toLocaleString();
